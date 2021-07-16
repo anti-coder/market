@@ -1,0 +1,69 @@
+// страница заказа
+
+include header.pug
+
+div(id='container' class='wrap')
+  div(class='contentOrder')
+    div(class='content')
+      header(class='site-header')
+        include site_header_order.pug
+
+    div(class='container')
+      div(class='rowCart')
+        div(class='col col-md-12')
+          
+      div(class='col col-md-12')
+        form#lite-shop-order(action="")
+                div(class='form-control')
+                  label(for='username') Имя
+                  input(
+                      type='text',
+                      id='username',
+                      placeholder='Введите Ваше имя',
+                      )
+                div(class='form-control')
+                  label(for='phone') Телефон
+                  input(
+                      type='text',
+                      id='phone',
+                      placeholder='+380505555555',
+                      )
+                div(class='form-control')
+                  label(for='email') Email
+                  input(
+                      type='text',
+                      id='email',
+                      placeholder='mail@example.com',
+                      )
+                div(class='form-control')
+                  label(for='address') Адрес
+                  textarea(
+                      id='address',
+                      placeholder='Введите Ваш адрес',
+                      )
+                div(class='form-control')
+                  label(for='rule') 
+                    input(
+                        type='checkbox',
+                        id='rule',
+                        value='1'
+                        ) 
+                    span  Я принимаю условия
+
+                div(class='container')
+                  div(class='rowOrder')
+                    button(class='submit', type='submit')   
+                      h2 Оформить заказ
+
+                    
+        div(class='rowReturn')
+          a(href='cart')
+            button(class='submit', type='submit') 
+              h2 Вернуться к корзине 
+
+br 
+br       
+
+include footer.pug
+  script(src='js/order.js')
+

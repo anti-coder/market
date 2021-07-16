@@ -1,0 +1,31 @@
+//корзина товаров
+
+include header
+
+div(id='container' class='wrap')
+  div(class='contentCart')
+    header(class='site-header')
+      include site_header_cart.pug
+
+    div(class='wrapCart')
+      div(class='rowCart')
+      
+      div(id='cart-nav') // cart.js str.151
+
+    div(class='container')
+      div(class='row')
+        div(class='col2cart')
+          a(href='order')
+            button(type='submit' class='submit') 
+              h2 Перейти к оформлению
+  
+        div(class='col2cart')
+          button(class='clean-cart', type='submit', class='submit') 
+            h2 Очистить корзину 
+          
+br
+br
+br
+
+include footer.pug             
+

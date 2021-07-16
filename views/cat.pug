@@ -1,0 +1,42 @@
+//страница категорий товаров
+
+include header
+
+div(id='answer') 
+
+div(class='wrap1')        
+  div(class='content')
+    header(class='site-header')
+      include site_header
+
+  div(id='container')
+    div(class='row')
+      each val2, index2 in cat
+          div(class="row2")
+            a(href='/cat?id='+val2['id'])                    
+              h3 #{val2['category']}
+            button(class="show-sort") 
+              <h6><i class="fa fa-sort"></i>Сортировать/выбрать</h6>
+            a(href='/cat?id='+val2['id'])                    
+              button(class="show-sort") 
+                h6 Сбросить фильтр  
+
+            //button(id='cleanBtn1' class='show-sort') 
+              //<h6><i class="fa fa-close"></i>Очистить</h6>
+      
+      div(id="choseBrend")
+      
+      
+
+        each val, index in goods
+          
+          include card.pug
+                  
+    div(class='description') #{cat[0]['description']} 
+
+  include nav
+
+  include sort
+  
+include footer
+

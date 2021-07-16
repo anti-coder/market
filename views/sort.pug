@@ -1,0 +1,51 @@
+// выезжающее меню сортировки,  входит в cat.pug
+
+div(class="site-sort button-primary")   
+  div 
+    h4 Сортировать/выбрать
+      button(class="close" onclick="showCloseSort()") <p><i class="fa fa-times"></i>Скрыть меню</p>
+
+    div 
+      h4 #{cat[0]['category']} 
+
+    div(id='cat') #{cat[0]['id']}
+
+    h4 <i class="fa fa-sort"></i>Сортировать по цене
+    each val, index in cat
+      a(href='/cat?id='+val['id']) 
+        h5 <i class="fa fa-sort-asc"></i> по возрастанию
+      a(href='/catDesc?id='+val['id']) 
+        h5 <i class="fa fa-sort-desc"></i> по убыванию           
+    
+    //br
+    
+    each val, index in cat
+      div
+        a(href='/catBrendSort?id='+val['id'])
+          h4 <i class="fa fa-sort"></i>Сортировать по бренду (в алфавитном порядке) 
+    
+    
+      //br
+      //список брендов в меню сортировки
+      div(id="sort-category-list") 
+          
+     
+      button(id="chBr" type="button" onclick="displayRadioValue()") 
+        h5 Выбрать бренд
+      //nav.js str.115
+      button(id='cleanBtn1' class='close' type="button") <p><i class="fa fa-times"></i>Очистить</p>
+      button(id='allCat' class='close' type="button") <p><i class="fa fa-times"></i>Сбросить фильтр</p>
+
+      
+
+      
+        
+      
+  
+    
+      
+     
+      
+    
+    
+      

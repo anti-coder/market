@@ -1,0 +1,20 @@
+h1 Панель администратора
+h2 Информация о покупателях
+table(table border='1')
+ tr
+  
+  th Покупатель
+  th Телефон покупателя
+  th Адрес покупателя
+  th email покупателя
+ each val, index in customer
+  tr 
+   
+   td #{val['user_name']}
+   td #{val['user_phone']}
+   td #{val['address']}
+   td #{val['user_email']}
+   
+
+a(href='/')
+  button(class="show-nav") Перейти на сайт   

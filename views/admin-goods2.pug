@@ -1,0 +1,18 @@
+h1 Панель администратора
+h2 Информация о заказанных товарах 2
+table(table border='1')
+ tr
+  th id товара
+  th Наименование товара
+  th Цена товара
+  th Количество
+  th Сумма
+ each val, index in goods
+  tr 
+   td #{val['goods_id']}
+   td #{val['name']}
+   td #{val['goods_cost']}
+   td #{val['goods_amount']}
+   td #{val['goods_amount']}
+a(href='/')
+  button(class="show-nav") Перейти на сайт     

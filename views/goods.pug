@@ -1,0 +1,40 @@
+//карточка одного товара
+
+include header
+
+div(class='row1')
+
+div(id='answer') 
+
+//div(class='wrap')
+div(class='content')
+  header(class='site-header')
+    include site_header
+
+div(id='container' class='containerGoods')
+    
+  h3(class="panel-title") #{goods[0]['name']}
+  div(class="row0")
+      
+    div(class="good1")
+
+      img(src="/images/"+goods[0]['image']) 
+
+        
+
+    div(class="good2")
+      h4 #{goods[0]['description']}
+      h4 Цена: #{goods[0]['cost'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')} руб.
+    
+
+  button(class="button button-primary add-to-cart-goods"
+                data-goods_id=goods[0]['id']
+            ) в корзину
+  
+  div(class='row') 
+
+include nav
+
+include footer
+
+   

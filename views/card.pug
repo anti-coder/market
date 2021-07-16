@@ -1,0 +1,25 @@
+//карточки товаров, входит в страницу категорий cat.pug стр. 15 
+
+div(class='col col-md-4')
+   
+    div(class='card')
+
+        a(href="goods/"+val['slug'])
+          
+            div(class='title')
+        
+                h4 #{val['name']}
+            
+                
+            img(
+                src='images/'+val['image']
+                class='card-images'
+            )
+            h4(class='text-center') #{val['cost'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')} руб.
+
+            
+        ul(class='card-actions')
+            button(
+                data-goods_id = val['id']
+                class='button button-primary add-to-cart'
+                ) в корзину

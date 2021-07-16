@@ -1,0 +1,42 @@
+//шапка сайта, входит в index.pug, cat.pug
+
+div(class='container')
+  div(class='rowHead')
+    
+    div(class='col2')
+      a(href='/')
+         h1 Вася Пупкин & Ко
+
+    div(class='col2')
+      a(href='/')    
+        button(id="phone") <h2><i class="fa fa-phone"></i>+7 (495) 000-0000</h2>
+
+    div(class='col3')
+      button(id="category" class='show-nav') <h2><i class="fa fa-list"></i>Категории товаров</h2>
+    //  h2 <i onclick="myFunction(this)" class="fa fa-list">Категории товаров</i>
+
+  
+    
+    div(class='col4') 
+      div(class='search')
+        input(
+              type='text', 
+              id='foundField',
+              placeholder='Поиск товара по названию',
+              )
+        div(class='buttonSearch')     
+          button(id='cleanBtn' class='show-nav') 
+            <i class="fa fa-close"></i>   
+          button(id='foundBtn' class='show-nav') 
+            <i class="fa fa-search"></i>
+    
+    div(class='col8')
+      a(href='/cart')
+        button(class="show-nav") <h2><i class="fa fa-shopping-cart"></i></h2> 
+        
+
+
+div(id="main-category-list") //список категорий товаров на главной странице     
+
+
+  

@@ -1,0 +1,29 @@
+h1 Панель администратора
+h2 Информация о заказах
+table(table border='1')
+ tr
+  th Номер транзакции
+  th Дата заказа
+  th id товара
+  th Цена товара
+  th Количество
+  th Сумма
+  th Покупатель
+  th Телефон покупателя
+  th Адрес покупателя
+  th email покупателя
+ each val, index in order
+  tr 
+   td #{val['id']}
+   td #{val['human_date']}
+   td #{val['goods_id']}
+   td #{val['goods_cost'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')} uah
+   td #{val['goods_amount']}
+   td #{val['total'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')} uah
+   td #{val['user']}
+   td #{val['phone']}
+   td #{val['address']}
+   td #{val['email']}
+
+a(href='/')
+  button(class="show-nav") Перейти на сайт   
