@@ -1,0 +1,26 @@
+h1 Панель администратора
+h2 Информация о количестве и сумме товаров, заказанных постоянными покупателями
+table(table border='1')
+ tr
+  th Номер транзакции
+  th Дата заказа
+  th id товара
+  th Наименование товара
+  th Цена товара
+  th Количество
+  th Сумма
+  th Логин
+  th Имя покупателя
+ each val, index in goods
+  tr 
+   td #{val['id']}
+   td #{val['human_date']}
+   td #{val['goods_id']}
+   td #{val['name']}
+   td #{val['goods_cost']}
+   td #{val['goods_amount']}
+   td #{val['goods_sum']}
+   td #{val['login']}
+   td #{val['user_name']}
+a(href='/')
+  button(class="show-nav") Перейти на сайт     

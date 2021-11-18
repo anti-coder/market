@@ -56,11 +56,13 @@ swalWithBootstrapButtons.fire({
   reverseButtons: true
 }).then((result) => {
   if (result.isConfirmed) {
-    window.location = "/cart";
+    window.location = "/cart"; //app.js str.312
   } else if (
       result.dismiss === Swal.DismissReason.cancel
   ) {
-    window.location = "/cat";
+    //history.back(); // вернуться на шаг назад
+    //document.location.reload(); // остаться на текущей странице и перезагрузиться
+    return confirmation(); // остаться на текущей странице без перезагрузки
   }
 })
 }
@@ -70,7 +72,7 @@ swalWithBootstrapButtons.fire({
 function ajaxGetGoodsInfo(){ //визуализируем корзину товаров, получаем всю информацию о товаре, посылаем post-запрос на сервер, вытаскиваем товар по id из корзины
   updateLocalStorageCart(); //сохранение товаров в корзине
   //fetch-запрос, узнаем, что сделал пользователь на сайте 
-  fetch('/get-goods-info',{ //app.js str.311
+  fetch('/get-goods-info',{ //app.js str.318
     method: 'POST',
     body: JSON.stringify({key: Object.keys(cart)}), //параметр, посылаемый на сервер, ключи товара, объект запаковываем в строу JSON
     headers: {                            // чтобы правильно послать сторку JSON (в каком формате буду работать) 
@@ -94,11 +96,6 @@ function showCart(data) { // вывод товара на экран, data - о�
   let amount = 0;
   for (let key in cart){ // ассоциативный перебор по объекту, перебираем общий массив cart
     
-    //out +=`<tr><td><img 
-    //            src='/images/${data[key]['image']}' alt="${data[key]['slug']}"></td></tr>`;
-    
-    //out +=`<tr><td colspan="4"><a href="/goods/${data[key]['slug']}">${data[key]['name']}</a></tr>`; 
-
     out +=`<tr><td colspan="4"><a href="/goods/${data[key]['slug']}"><img 
                 src='/images/${data[key]['image']}'class="smoll-style" alt="${data[key]['slug']}">${data[key]['name']}</a></tr>`;  // название товара, первая строка вся занята гиперссылкой, 4 ячейки в одну
     out += `<tr><td><i class="far fa-minus-square cart-minus" data-goods_id="${key}"></i></td>`; // значок "-", привязка к  id
@@ -110,7 +107,6 @@ function showCart(data) { // вывод товара на экран, data - о�
     total += cart[key]*data[key]['cost']; 
       }
     out += `<tr><td>Всего:</td> <td>${amount} шт.</td> <td>на сумму</td>  <td colspan="2">${formatPrice(total)} руб.</td> </tr>`; // 3 ячейки в одну
- // out += `<tr><td colspan="3">Total: </td> <td>${formatPrice(total)} uah</td></tr>`; // 3 ячейки в одну
     out += `</tbody></table>`; // выводим таблицу на экран
 
   document.querySelector('#cart-nav').innerHTML = out; // поле корзины -------------------- cart.pug 15
@@ -139,23 +135,24 @@ function cartMinus() {
   ajaxGetGoodsInfo();
  }
 
-function cartZero() {
+//удалить товар из корзины
+function cartZero() {  
   for (let key in cart){ 
- // alert(cart[key]);       // количество товара по видам
+//  alert(cart[key]);       // количество товара по видам
   cart[key] = 0;
   delete(cart[key]);
   }
  };
   
-
+//вывести очищенную корзину
 function cleanCart(data) {
   let out = '<table class="table table-striped table-cart"><tbody>';//вводим данные в виде таблицы
   let total = 0; // сумма товаров в корзине
   let amount = 0;
   out += `<tr><td>Всего:</td> <td>0 шт.</td> <td>на сумму</td>  <td colspan="2">0 руб.</td> </tr>`; // 3 ячейки в одну
   out += `</tbody></table></div>`; // выводим таблицу на экран
-  document.querySelector('#cart-nav').innerHTML = out; // вставить поле корзины -------- cart.pug 14
-  document.querySelectorAll('.clean-cart').forEach(function(element){  //вешаем событие на значок "+"
+  document.querySelector('#cart-nav').innerHTML = out; // вставить поле корзины -------- cart.pug 13
+  document.querySelectorAll('.clean-cart').forEach(function(element){  //вешаем событие на "clean-cart"
      element.onclick = cartZero();
   });
 

@@ -9,11 +9,14 @@ div(class='wrap1')
     header(class='site-header')
       include site_header
 
+
+
   div(id='container')
+    br
     div(class='row')
       each val2, index2 in cat
           div(class="row2")
-            a(href='/cat?id='+val2['id'])                    
+            a(href='/cat?id='+val2['id'])  
               h3 #{val2['category']}
             button(class="show-sort") 
               <h6><i class="fa fa-sort"></i>Сортировать/выбрать</h6>

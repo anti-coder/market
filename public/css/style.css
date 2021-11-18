@@ -1,5 +1,3 @@
-
-
 @font-face {
    font-family: Post Pixel-7; 
    text-align: center;
@@ -9,8 +7,8 @@
 h1 {
   font-family: Post Pixel-7; 
   text-align: center;
-  font-size: 24px; 
-  line-height: 40px;
+  font-size: 32px; 
+  line-height: 56px;
   font-weight: 700; 
   color: white;
   }
@@ -18,7 +16,7 @@ h1 {
 h2 {
   font-family: Post Pixel-7; 
   text-align: center;
-  font-size: 12px; 
+  font-size: 18px; 
   line-height: 40px;
   font-weight: 500; 
   color: white;
@@ -28,7 +26,7 @@ h2 {
 h3 {
   font-family: Post Pixel-7; 
   text-align: center;
-  font-size: 24px; 
+  font-size: 32px; 
   line-height: 48px;
   font-weight: 700; 
   color: rgb(12, 3, 30);
@@ -37,7 +35,7 @@ h3 {
 h3:hover {
   font-family: Post Pixel-7; 
   text-align: center;
-  font-size: 24px; 
+  font-size: 32px; 
   line-height: 48px;
   font-weight: 700; 
   color: rgb(150, 9, 35);
@@ -46,7 +44,7 @@ h3:hover {
 
 h4 {
   font-family: Post Pixel-7; 
-  font-size: 16px; 
+  font-size: 20px; 
   line-height: 32px;
   font-weight: 500;
   color: rgb(12, 3, 30);
@@ -54,7 +52,7 @@ h4 {
 
 h5 {
   font-family: Post Pixel-7; 
-  font-size: 12px; 
+  font-size: 18px; 
   line-height: 24px;
   font-weight: 500;
   color: rgb(12, 3, 30);
@@ -63,17 +61,16 @@ h5 {
 
 h6 {
   font-family: Post Pixel-7; 
-  font-size: 10px;
+  font-size: 14px;
   line-height: 20px; 
   font-weight: 500; 
   margin: auto;
   color: white;
-  
   }
 
 p {
   font-family: Post Pixel-7; 
-  font-size: 8px; 
+  font-size: 12px; 
   line-height: 16px;
   font-weight: 500; 
   margin: auto;
@@ -84,7 +81,7 @@ p {
 
 .close {
   width: auto;
-  height: 10px;
+  height: auto;
 }  
 
 /*---------------------*/
@@ -95,7 +92,7 @@ p {
   flex: 1;
   justify-content: center;
   text-align: center;
-/*  background: green;*/
+ /* background: green;*/
 }
 
 
@@ -105,13 +102,7 @@ p {
   flex-grow: 1;
 }
 
-.container {
- padding: 5px;
- margin-bottom: 0px;
- width: 100%;
- padding: 20px 0 20px 0;
- height: auto;
-}
+
 
 .row {
   display: flex;
@@ -130,8 +121,9 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: center;
-/*  background: orange;*/
+  margin: 10px;
+  justify-content: space-around;
+/*  background: olive;*/
 }
 
 
@@ -141,18 +133,8 @@ p {
   flex-wrap: wrap;
   width: 100%;
   justify-content: flex-start;
-/*  background: blue;*/
 }
 
-.rowReturn {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-top: -75px;
-  justify-content: flex-end;
-/*  background: yellow;*/
-}
 
 /*--------------site-header-------------*/
 
@@ -167,8 +149,10 @@ p {
   text-align: center;
   position: fixed;
   top: 0; 
-  z-index: 100;
+  padding: 10px; 
+  z-index: 102;
   background: none;
+/*  background: brown;*/
 }
 
 .site-header { /*------заголовок для обычных страниц------*/
@@ -180,11 +164,53 @@ p {
   text-align: center;
   position: fixed;
   top: 0; 
+  padding: 10px; 
   z-index: 102;
-  /*background: rgb(70, 110, 191);*/
   background: rgb(57, 80, 130);
-  /*background: url(../images/head.jpg);*/
+/*  background: brown;*/
+  }
+
+
+.col1 {
+  width: 18%;
+  height: 60px;
+  margin: 5px auto 5px auto;
+ /* background: yellow;*/
+ }
+
+.col2 {
+  width: 11%;
+  height: 60px;
+  margin: 5px auto 5px auto;
+/*  background: red;
+  border: 2px solid pink;*/
 }
+
+.col3 {
+  width: 17%;
+  height: 60px;
+  margin: 5px auto 5px auto;
+/*  background: red;
+  border: 2px solid pink;*/
+}
+
+
+.col4 {
+  width: 28%;
+  height: 60px;
+  margin: 5px auto 5px auto;
+ /* background: orange;*/
+}
+
+
+#category {
+  background: rgb(135, 62, 193);
+}
+
+#category:hover {
+  background: rgb(150, 9, 35);;
+}
+
 
 .search {
   display: inline-flex; 
@@ -197,6 +223,7 @@ p {
   border: solid 0.5px; 
   border-radius:5px; 
   background: rgb(236, 237, 238); 
+/*  background: yellow;*/
 }
 
 #foundField {
@@ -206,71 +233,33 @@ p {
   font-family: Post Pixel-7; 
   border: none;
   background: rgb(236, 237, 238); 
-/*  background: yellow;*/
+/*  background: gray;*/
 }
 
-.col1 {
-  width: 9%;
-  height: 40px;
-}
-
-.col2 {
-  width: 18%;
-  height: 40px;
-}
-
-.col3 {
-  width: 23%;
-  height: 40px;
-}
-
-.col4 {
-  width: 34%;
-  height: 40px;
-}
-
-.col8 {
-  width: 7%;
-  height: 40px;
-}
-
-#category {
-  background: rgb(135, 62, 193);
-}
-
-#category:hover {
-  background: rgb(150, 9, 35);;
-}
 
 #foundBtn {
+  width: auto;
   background: rgb(135, 62, 193);
 }
 
 #foundBtn:hover {
+  width: auto;
   background: rgb(150, 9, 35);;
   color: rgb(12, 2, 1);
 }
 
 #cleanBtn {
+  width: auto;
   border: none;
   color: rgb(76, 2, 3); 
 }
 
 #cleanBtn {
+  width: auto;
   border: none;
   color: rgb(12, 2, 1); 
 }
 
-
-#phone {
-  border: none;
-  color: white;
-}
-
-#phone:hover {
-  border: none;
-  color: rgb(150, 9, 35);
-}
 
 /*----------------nav----------------- */
 
@@ -278,10 +267,10 @@ p {
   display: block;
   width: 100%;
   /*min-height: 100vh;*/
-  height: 430px;
+  height: 450px;
   position: absolute;
   left: -100%; 
-  top: 120px;
+  top: 250px;
   z-index: 100;
   padding: 5px;
   transition: all ease 1s;
@@ -349,18 +338,18 @@ ul.main-category-list {
   position: relative;
   top: 0px;
   z-index: 10;
-  font-size: 16px;
+  font-size: 32px;
   font-family: Post Pixel-7; 
   color: white;
 }
 
 ul.main-category-list a {
   color: white;
-  margin: 10px;
-}
+  margin: 28px;
+  }
 
 ul.main-category-list a:hover {
-  margin: 10px;
+  margin: 28px;
   background: rgb(150, 9, 35);
 }
 
@@ -411,11 +400,6 @@ color: rgb(12, 3, 30);
 /*  background: red;*/
   }
 
-
-
-.close p {
-  line-height: 10px;
-}
 
 #chBr {
   height: 20px;
@@ -725,10 +709,23 @@ margin: auto;
   width: 100%;
   margin-top: 120px;
   text-align: center;
+  /*background: pink;*/
+}
+
+.rowCart1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+  text-align: center;
+  /*background: gray;*/
 }
 
 .contentCart {
-margin: -50px auto 0 auto;
+margin: 150px auto 0 auto;
 width: 100%;
 height: auto;
 }
@@ -739,55 +736,45 @@ height: auto;
   flex: 1;
   justify-content: center;
   text-align: center;
-  margin-top: -50px;
+  margin-top: -180px;
+ /* background: green;*/
 }
 
 #cart-nav { 
   margin: auto 50px auto 50px;
-  padding: 50px;
-  /*background: red;*/
+  padding: 20px;
+/*  background: red;*/
 }
 
 .smoll-style {
   max-height: 120px;
   max-width: 120px;
   margin: 0 20% 0 5%;
+/*  background: blue;*/
 }
-
-.col2cart {
-  width: 28%;
-  height: 40px;
-  text-align: center;
-}
-
-.col3cart {
-  width: 44%;
-  height: 40px;
-  text-align: center;
-}
-
-.col3cart h3 {
-  color: white;
-  font-size: 24px;
-  line-height: 40px;
-}
-
 
 
 .button-primary {
   font-size: 12px;
+/*  background: orange;*/
 }
 
 .clean-cart {
   font-size: 12px;
+  background: rgb(135, 62, 193);
 }
 
+
+.clean-cart:hover {
+background: rgb(150, 9, 35);  
+}
 
 .table {
  width: 100%;
  font-family: Post Pixel-7; 
  border-color: rgb(12, 3, 30);
  color: rgb(12, 3, 30);
+/* background: brown;*/
 }
 
 th {  
@@ -800,6 +787,7 @@ justify-content: space-between;
 
 .submit {
 background: rgb(135, 62, 193);
+
 }
 
 
@@ -841,9 +829,43 @@ background: rgb(150, 9, 35);
  border: 1px solid rgb(225, 232, 247);
  background: rgb(236, 237, 238);
  background: none;
-/*  background: pink;*/
 }
 
+
+.gest {
+ background: rgb(169, 178, 209);
+}
+
+.form-control-gest {
+  margin-top: -150px;
+}
+
+
+/* ------------register------------------- */
+
+.container {
+ width: 100%;
+ height: auto;
+/* background: yellow;*/
+}
+
+
+
+/* ------------cabinet------------------- */
+
+.contentCabinet {
+margin: auto;
+width: 100%;
+height: 120px;
+/*background: red;*/
+}
+
+.table {
+margin: auto auto 80px auto;
+width: 100%;
+height: auto;
+/*background: blue;*/
+}
 
 /* ------------footer------------------- */
 
@@ -891,22 +913,256 @@ background: rgb(150, 9, 35);
    background: rgb(150, 9, 35);
 }
 
+#regBtn {
+  color: white;
+}
+
 
 #container {
   display: flex;
   flex-direction: column;
   flex: 1;
   height: auto; /*для заполненной страницы*/
-  
 }
 
+#user {
+  color: white;
+}
+
+
+#contacts {
+ display: flex;
+  flex-direction: row; 
+  margin: 20px 50px 20px 50px;
+}
+
+address.list {
+ display: flex;
+  flex-direction: row; 
+  margin: 50px; 
+}
+/*
+.form {
+  width: 20%;
+  margin: 280px auto auto 50px;
+  text-align: center;
+  z-index: 100;
+  background: orange;
+}
+*/
+
+fieldset {
+  padding: 0 10px 0 10px;
+/*  background: purple;*/
+}
+
+#contactname {
+width: 100%;
+height: 30px;
+margin: 5px 0 5px 0;
+opacity: 0.5;
+font-family: Post Pixel-7; 
+text-align: left;
+font-size: 20px;
+font-weight: 700;
+padding: 0;
+/*background: blue;*/
+}
+
+#contactname:hover {
+width: 100%;
+height: 30px;
+margin: 5px 0 5px 0;
+opacity: 1;
+font-family: Post Pixel-7; 
+text-align: left;
+font-size: 20px;
+font-weight: 700;
+padding: 0;
+/*background: green;*/
+}
+
+#email {
+width: 100%;
+height: 30px;
+margin: 5px 0 5px 0;
+opacity: 0.5;
+font-family: Post Pixel-7; 
+text-align: left;
+font-size: 20px;
+font-weight: 700;
+padding: 0;
+/*background: blue;*/
+}
+
+#email:hover {
+width: 100%;
+height: 30px;
+margin: 5px 0 5px 0;
+opacity: 1;
+font-family: Post Pixel-7; 
+text-align: left;
+font-size: 20px;
+font-weight: 700;
+padding: 0;
+/*background: green;*/
+}
+
+
+#message {
+width: 100%;
+height: 30px;
+margin: 5px 0 5px 0;
+opacity: 0.5;
+font-family: Post Pixel-7; 
+text-align: left;
+font-size: 20px;
+font-weight: 700;
+padding: 0;
+/*background: blue;*/
+}
+
+
+#message:hover {
+width: 100%;
+height: 30px;
+margin: 5px 0 5px 0;
+opacity: 1;
+font-family: Post Pixel-7; 
+text-align: left;
+font-size: 20px;
+font-weight: 700;
+padding: 0;
+/*background: green;*/
+}
+
+#submit {
+color: white;  
+border-width: 0px;
+opacity: 1;
+font-family: Post Pixel-7; 
+text-align: left;
+font-size: 20px;
+font-weight: 700;
+padding: 0;
+opacity: 1;
+background: rgb(135, 62, 193);
+}
+
+#submit:hover {
+color: white; 
+border-width: 0px;
+opacity: 1;
+font-family: Post Pixel-7; 
+text-align: left;
+font-size: 20px;
+font-weight: 700;
+padding: 0;
+opacity: 1;
+background: rgb(150, 9, 35);
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 1600px){
+
+h1 {
+  font-size: 24px; 
+  line-height: 56px;
+  }
+
+h6 {
+  font-size: 10px;
+  line-height: 16px; 
+  }
+
+
+.site-nav {
+  top: 120px;
+  }
+
+.col1 {
+  height: 40px;
+  }
+
+.col2 {
+  height: 40px;
+  }
+
+.col3 {
+  height: 40px;
+  }  
+
+.col4 {
+  height: 40px;
+}
+
+ul.main-category-list {
+  font-size: 16px;
+  }
+
+}
 
 
 @media only screen and (max-width: 1118px){
 
 h1 {
+  font-size: 24px; 
+  line-height: 40px;
+  }
+
+h2 {
+  font-size: 12px; 
+  line-height: 40px;
+  }
+
+
+h3 {
+  font-size: 24px; 
+  line-height: 48px;
+  }
+
+h3:hover {
+  font-size: 24px; 
+  line-height: 48px;
+  }
+
+
+h4 {
+  font-size: 16px; 
+  line-height: 32px;
+  }
+
+h5 {
+  font-size: 12px; 
+  line-height: 24px;
+  }
+
+h6 {
+  font-size: 10px;
+  line-height: 20px; 
+  }
+
+p {
+  font-size: 8px; 
+  line-height: 16px;
+  }
+
+
+
+h1 {
   font-size: 20px; 
   }
+
+h6 {
+  font-size: 8px;
+  line-height: 16px; 
+  }
+
 
 .row {
   margin-left: 60px;
@@ -938,10 +1194,20 @@ h1 {
   right: 30px;
 }
 
+#foundField {
+  width: 50%;
+  }
+
+.site-nav {
+  top: 150px;
+  }
+
+
+
 }
 
 
-@media only screen and (max-width: 942px){
+@media only screen and (max-width: 990px){
 
 .row {
   margin-left: 50px;
@@ -966,17 +1232,36 @@ width: 30%;
 
 
 h1 {
-  font-size: 18px; 
-  }
+  font-size: 26px;
+}
 
 h2 {
-  font-size: 10px; 
-  }
+  font-size: 18px;
+}
 
 h4 {
   font-size: 10px; 
   line-height: 28px;
 }
+
+h6 {
+  font-size: 10px; 
+  }
+
+
+.col1 {
+  width: 30%;
+ }
+
+.col2 {
+  width: 16%;
+}
+
+.col4 {
+  width: 45%;
+}
+
+
 
 .add-to-cart-goods {
   width: 18%;
@@ -1015,32 +1300,6 @@ margin: auto;
 height: 70px;
 width: auto;
 margin: auto;
-}
-
-}
-
-
-@media only screen and (max-width: 866px){
-
-.col1 {
-  width: 50%;
-}
-
-.col2 {
-  width: 50%;
-}
-
-.col3 {
-  width: 35%;
-}
-
-.col4 {
-  width: 65%;
-  margin-bottom: 20px;
-}
-
-.col8 {
-  width: 100%;
 }
 
 
@@ -1140,19 +1399,26 @@ margin: auto;
 }
 
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 780px){
+
+h1 {
+  font-size: 20px;
+}
 
 .wrap{
   margin-top: 20px;
 }
 
-.col3 {
-  width: 40%;
+.col1 {
+  width: 28%;
+  }
+
+.col2 {
+  width: 18%;
 }
 
-
 .col4 {
-  width: 60%;
+  width: 40%;
 }
 
 .row {
@@ -1237,7 +1503,30 @@ margin: 20px auto 20px auto;
 
 @media only screen and (max-width: 690px){
 
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 14px;
+}
+
+
+.col1 {
+  width: 70%;
+  }
+
+.col2 {
+  width: 30%;
+}
+
+.col4 {
+  width: 100%;
+}
+
 #foundField {
+  width: 70%;
   font-size: 12px;
 }
 
@@ -1257,25 +1546,14 @@ margin: 20px auto 20px auto;
   width: 280px;
 }
 
+.wrapCart {
+  margin-top: 0px;
+
+}
+
 }
 
 @media only screen and (max-width: 565px){
-
-
-.col3 {
-  width: 47%;
-}
-
-
-.col4 {
-  width: 53%;
-}
-
-
-#foundField {
-  width: 50%;
-  font-size: 8px;
- }
 
 
 h1 {
@@ -1366,7 +1644,6 @@ margin: auto;
 
 
 #foundField {
-  width: 45%;
   font-size: 6px;
  }
 
@@ -1439,6 +1716,10 @@ width: 80%;
 margin: 10px auto 10px auto;  
 }
 
+.site-nav {
+  top: 280px;
+  }
+
 }
 
 @media only screen and (max-width: 410px){
@@ -1446,18 +1727,6 @@ margin: 10px auto 10px auto;
 h1{
 font-size: 16px;
 }
-
-.col3 {
-  width: 40%;
-}
-
-.col4 {
-  width: 60%;
-}
-
-#foundField {
-  width: 48%;
- }
 
 h2 {
 font-size: 6px; 
@@ -1469,6 +1738,13 @@ h6 {
 
 p {font-size: 4px; 
 }
+
+
+#foundField {
+  width: 50%;
+  font-size: 12px;
+}
+
 
 .add-to-cart-goods {
   width: 40%;
@@ -1510,17 +1786,6 @@ p {font-size: 4px;
 
 
 @media only screen and (max-width: 388px){
-
-
-.col3 {
-  width: 35%;
-}
-
-.col4 {
-  width: 65%;
-}
-
-
 
 h6 {font-size: 3px; 
   font-weight: 400; 
@@ -1592,6 +1857,9 @@ font-size: 6px;
   margin-bottom: 10px;
 }
 
+.col8 {
+  margin-top: 0;
+}
 
 .col2cart h5{
 font-size: 6px;

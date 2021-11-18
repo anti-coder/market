@@ -1,0 +1,35 @@
+h1 Панель администратора
+h2 Информация о заказах гостей
+table(table border='1')
+ tr
+  th Номер транзакции
+  th Дата заказа
+  th id товара
+  th Цена товара
+  th Количество
+  th Сумма
+  th Гость
+  th Телефон гостя
+  th Адрес гостя
+  th email гостя
+  
+
+  
+
+ each val, index in ordergest
+  tr 
+   td #{val['id']}
+   td #{val['human_date']}
+   td #{val['goods_id']}
+   td #{val['goods_cost'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')} руб.
+   td #{val['goods_amount']}
+   td #{val['total'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')} руб.
+   td #{val['name']}
+   td #{val['phone']}
+   td #{val['address']}
+   td #{val['email']}
+   
+
+
+a(href='/')
+  button(class="show-nav") Перейти на сайт   

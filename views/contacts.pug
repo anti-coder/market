@@ -1,0 +1,109 @@
+//контакты
+
+include header
+
+div(id='answer')  
+
+div(class='wrap')
+  div(class='contentCart')
+    header(class='site-header')
+      include site_header_contacts.pug
+
+      
+ 
+    div(class='wrapCart')
+      div(class='rowCart')
+
+      h3  Контакты
+      
+      div(id='contacts')
+
+        .divimg
+        script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A50ed3c82c5d29456233a864bd84a921952f724ec5a30ba9874feec2cf68abc8e&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true")
+
+
+        address.list
+        ul
+          h4 Контакты:
+          li Адрес: Загородное ш., 2, Москва, Россия, 115191;
+          li
+            a(href='tel:+4959009090') Телефон: +7 (495) 900-90-90;
+          li
+            a(href='https://mail.google.com/mail/?view=cm&fs=1&to=jul.andrrr@gmail.com') E-mail: jul.andrrr@gmail.com;
+          li
+            a(href='https://api.whatsapp.com/send/?phone=79261825980') WATSAPP: +79261825980;
+
+div(class='gest')
+  br
+  br
+  h3 Отправить сообщение
+
+    div(class='container')
+      div(class='rowCart')
+      
+      div(class='col col-md-12')
+        form#gest-message(action="")
+                div(class='form-control-gest')
+                  label(for='gestname1') Имя
+                  input(
+                      type='text',
+                      id='gestname1',
+                      placeholder='Введите Ваше имя'
+                      )
+                div(class='form-control')
+                  label(for='gestphone1') Телефон
+                  input(
+                      type='text',
+                      id='gestphone1',
+                      placeholder='+380505555555'
+                      )
+                div(class='form-control')
+                  label(for='gestemail1') Email
+                  input(
+                      type='text',
+                      id='gestemail1',
+                      placeholder='mail@example.com'
+                      )
+                div(class='form-control')
+                  label(for='gestmessage1') Сообщение
+                  textarea(
+                      id='gestmessage1',
+                      placeholder='Введите Ваше сообщение'
+                      )
+
+                div(class='form-control')      
+                  label(for='code1') 
+                  input(
+                      type='hidden', name='code1' value='kjmhvjuhnrfchgbrtghik',
+                      id='code1', size='' required=''
+                      placeholder='скрытый код'
+                      )
+      
+
+                  
+ 
+                div(class='form-control')
+                  label(for='rule') 
+                    input(
+                      type='checkbox',
+                      id='rule1',
+                      value='1'
+                        ) 
+                    span  Я принимаю условия
+
+                div(class='container')
+                  div(class='rowOrder')
+                    button(class='submit', type='submit')   
+                      h2 Отправить сообщение
+
+
+  br            
+  br
+
+include nav
+
+include footer.pug
+
+  
+
+

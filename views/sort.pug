@@ -10,22 +10,28 @@ div(class="site-sort button-primary")
 
     div(id='cat') #{cat[0]['id']}
 
-    h4 <i class="fa fa-sort"></i>Сортировать по цене
+    h4 <i class="fa fa-sort"></i>Сортировать по цене 
     each val, index in cat
       a(href='/cat?id='+val['id']) 
-        h5 <i class="fa fa-sort-asc"></i> по возрастанию
+      
+        h5 <i class="fa fa-sort-asc"></i> по возрастанию 
+        //app.js str.96
       a(href='/catDesc?id='+val['id']) 
-        h5 <i class="fa fa-sort-desc"></i> по убыванию           
+      
+        h5 <i class="fa fa-sort-desc"></i> по убыванию 
+        //app.js str.151          
     
     //br
     
     each val, index in cat
       div
-        a(href='/catBrendSort?id='+val['id'])
+        a(href='/catBrendSort?id='+val['id']) 
+        
           h4 <i class="fa fa-sort"></i>Сортировать по бренду (в алфавитном порядке) 
+          //app.js str.187
     
     
-      //br
+      //  br
       //список брендов в меню сортировки
       div(id="sort-category-list") 
           

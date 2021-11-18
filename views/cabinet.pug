@@ -1,0 +1,42 @@
+//кабинет
+
+include header
+
+div(id='answer')  
+
+div(class='contentCabinet')
+  header(class='site-header')
+    include site_header_cabinet.pug
+
+br
+  
+h3 Личный кабинет #{user}
+
+h3 Информация о заказах 
+
+table(table border='1' class='table')
+ tr 
+  th Номер транзакции
+  th id товара
+  th Цена товара
+  th Количество
+  th Сумма
+  th Дата заказа
+
+  
+
+ each val, index in order
+  tr 
+    td #{val['id']}
+    td #{val['goods_id']}
+    td #{val['goods_cost'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')} uah
+    td #{val['goods_amount']}
+    td #{val['total'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')} uah
+    td #{val['human_date']}
+      
+
+
+              
+include nav
+   
+include footer

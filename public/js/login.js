@@ -1,9 +1,9 @@
-function sendLogin() {
+function sendLoginAdmin() {
     //fetch-запрос, узнаем, что сделал пользователь на сайте 
-    fetch('/login', {
+    fetch('/loginAdmin', {
         method: 'POST',
         body: JSON.stringify({
-            'login': document.querySelector('#login').value,
+            'loginAdmin': document.querySelector('#loginAdmin').value,
             'password': document.querySelector('#password').value,
         }),
         headers: {
@@ -15,5 +15,5 @@ function sendLogin() {
 
 document.querySelector('form').onsubmit = function (event) {
     event.preventDefault();
-    sendLogin();
+    sendLoginAdmin();
 }

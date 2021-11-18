@@ -53,31 +53,31 @@
     .s2 img {
       width: 100%;
       height: auto;
-      margin: -450px auto auto auto;
+      margin: -320px auto auto auto;
       opacity: 0.5;
     }
 
 
 .top-left {
     position: absolute;
-    top: 200px;
+    top: 300px;
     left: 15%;
 }
 
 .centered {
     position: absolute;
-    top: 300px;
+    top: 450px;
     left: 15%;
 /*    transform: translate(-50%, -50%);*/
 }
 
 .centered h2 {
-  font-size: 72px;
+  font-size: 86px;
 }
 
 .bottom-left {
     position: absolute;
-    top: 450px;
+    top: 620px;
     left: 15%;
 }
 
@@ -190,6 +190,36 @@
       max-width: 100%;
     }
 
+
+
+@media only screen and (max-width: 1600px){
+
+.s2 img {
+      margin: -220px auto auto auto;
+    }
+
+.top-left {
+    top: 200px;
+}
+
+.centered {
+  top: 300px;
+}
+
+.centered h2 {
+  font-size: 72px;
+}
+
+.bottom-left {
+    top: 470px;
+}
+
+.center-right {
+  top: 450px;
+}
+
+
+}
    
 @media only screen and (max-width: 1118px){
 

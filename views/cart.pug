@@ -1,31 +1,42 @@
-//корзина товаров
+//корзина
 
 include header
 
-div(id='container' class='wrap')
+div(id='answer')  
+
+div(class='wrap')
   div(class='contentCart')
     header(class='site-header')
       include site_header_cart.pug
 
+      
+ 
     div(class='wrapCart')
       div(class='rowCart')
-      
-      div(id='cart-nav') // cart.js str.151
 
-    div(class='container')
-      div(class='row')
-        div(class='col2cart')
-          a(href='order')
-            button(type='submit' class='submit') 
-              h2 Перейти к оформлению
+      h3  Корзина
+      Car
+      div(id='cart-nav') // cart.js str.110, 152
+      
   
-        div(class='col2cart')
-          button(class='clean-cart', type='submit', class='submit') 
-            h2 Очистить корзину 
+    
+div(class='wrap')
+  div(class='rowCart1')
+    a(href='order')
+      button(type='submit' class='submit') 
+        h2 Перейти к оформлению
+  
+
+    //a(href='#')
+    button(type='submit' class='clean-cart' ) 
+      h2 Очистить корзину
           
 br
 br
-br
 
-include footer.pug             
+include footer.pug  
 
+              
+include nav
+   
+include footer

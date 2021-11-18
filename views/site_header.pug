@@ -1,19 +1,17 @@
 //шапка сайта, входит в index.pug, cat.pug
 
-div(class='container')
-  div(class='rowHead')
+
+div(class='rowHead')
+    
+    div(class='col1')
+      a(href='/')
+        h1 Вася Пупкин & Ко
+
     
     div(class='col2')
-      a(href='/')
-         h1 Вася Пупкин & Ко
-
-    div(class='col2')
-      a(href='/')    
-        button(id="phone") <h2><i class="fa fa-phone"></i>+7 (495) 000-0000</h2>
-
-    div(class='col3')
-      button(id="category" class='show-nav') <h2><i class="fa fa-list"></i>Категории товаров</h2>
-    //  h2 <i onclick="myFunction(this)" class="fa fa-list">Категории товаров</i>
+      button(id="category" class='show-nav')
+        <h6><i class="fa fa-list">Каталог</i></h6>
+    //  h6 <i onclick="myFunction(this)" class="fa fa-list">Каталог</i>
 
   
     
@@ -30,13 +28,27 @@ div(class='container')
           button(id='foundBtn' class='show-nav') 
             <i class="fa fa-search"></i>
     
-    div(class='col8')
+
+    div(class='col2')
+      a(href='/contacts')    
+        button(class='show-nav') <h6><i class="fa fa-address-card"></i>Контакты</h6>        
+
+
+
+    div(class='col3')
+      a(href='/register')
+        button(class="show-nav") <h6><i class="fa fa-user"></i>Личный кабинет/регистрация</h6> 
+        //app.js str.343
+
+    div(class='col2')
       a(href='/cart')
-        button(class="show-nav") <h2><i class="fa fa-shopping-cart"></i></h2> 
-        
+        button(class="show-nav") <h6><i class="fa     fa-shopping-cart"></i>Корзина</h6> 
+      //app.js str.311  
 
 
-div(id="main-category-list") //список категорий товаров на главной странице     
+
+div(id="main-category-list") 
+//список категорий товаров на главной странице     
 
 
-  
+ 

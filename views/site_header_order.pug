@@ -1,16 +1,25 @@
-// шапка страницы заказа
+// шапка оформления заказа
 
-div(class='container')
-  div(class='rowHead')
+//div(class='container')
+div(class='rowHead')
     
     div(class='col2cart')
       a(href='/')
         h1 Вася Пупкин & Ко
   
-    div(class='col3cart')
-      h3 Оформление заказа
+    div(class='col4')
+      h1 Оформление заказа
           
-    div(class='col2cart')
+    div(class='col2')
       a(href='/')
         button(class="show-nav") 
-          h2 <i class="fa fa-home"></i>На главную     
+          h6 <i class="fa fa-home"></i>На главную 
+          
+    div(class='col2')
+      a(href='/register')
+        button(class="show-nav") <h6><i class="fa fa-user"></i>Личный кабинет</h6> 
+        //app.js str.343      
+
+    div(class='col2')
+      //input(id='regBtn' type='button' onclick='history.back(-1);' value='X')           
+      button(id="regBtn" type='button' onclick='history.back(-1);') <h6><i class="fas fa-arrow-left"></i></h6> 

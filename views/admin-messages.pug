@@ -1,0 +1,27 @@
+h1 Панель администратора
+h2 Информация о сообщениях на сайт
+table(table border='1')
+ tr
+  th Номер сообщения
+  th Дата сообщения
+  th Имя оправителя
+  th Телефон отправителя
+  th email отправителя
+  th Сообщение
+  
+  
+
+  
+
+ each val in messages
+  tr 
+   td #{val['id']}
+   td #{val['human_date']}
+   td #{val['gest_name']}
+   td #{val['gest_phone']}
+   td #{val['gest_email']}
+   td #{val['gest_message']}
+
+
+a(href='/')
+  button(class="show-nav") Перейти на сайт   

@@ -1,0 +1,118 @@
+// Личный кабинет - регистрация покупателя
+
+include header.pug
+
+div(id='container' class='wrap')
+  div(class='contentOrder')
+    div(class='content')
+      header(class='site-header')
+        include site_header_register.pug
+
+    
+div(class='container')
+      div(class='rowCart')
+      div(class='col col-md-12')
+        form#lite-shop-order0(action="")
+                div(class='form-control')
+                  label(for='login') Логин
+                  input(
+                      type='text',
+                      id='login0',
+                      placeholder='Введите Ваш логин',
+                      )
+
+                div(class='form-control')
+                  label(for='password') Пароль
+                  input(
+                      type='text',
+                      id='password0',
+                      placeholder='Введите Ваш пароль',
+                      )
+
+                div(class='container')
+                  div(class='rowOrder')
+                    button(class='submit', type='submit')   
+                      h2 Войти
+
+div(class='gest')
+  br
+  br
+  h3 Нет учетной записи?
+  h3 Зарегистрироваться
+
+    div(class='container')
+      div(class='rowCart')
+      
+      div(class='col col-md-12')
+        form#lite-shop-order(action="")
+                div(class='form-control-gest')
+                  label(for='username') Имя
+                  input(
+                      type='text',
+                      id='username',
+                      placeholder='Введите Ваше имя',
+                      )
+                div(class='form-control')
+                  label(for='phone') Phone
+                  input(
+                      type='text',
+                      id='phone1',
+                      placeholder='+7 000-00-00',
+                      )
+                div(class='form-control')
+                  label(for='email') Email
+                  input(
+                      type='text',
+                      id='email',
+                      placeholder='mail@example.com',
+                      )
+                div(class='form-control')
+                  label(for='address') Адрес
+                  textarea(
+                      id='address',
+                      placeholder='Введите Ваш адрес',
+                      )
+
+                div(class='form-control')
+                  label(for='login') Логин
+                  textarea(
+                      id='login',
+                      placeholder='Введите Логин',
+                      )
+
+
+                div(class='form-control')
+                  label(for='password') Пароль
+                  textarea(
+                      id='password',
+                      placeholder='Введите Пароль',
+                      )
+
+
+
+
+
+                div(class='form-control')
+                  label(for='rule') 
+                    input(
+                        type='checkbox',
+                        id='rule',
+                        value='1'
+                        ) 
+                    span  Я принимаю условия
+
+                div(class='container')
+                  div(class='rowOrder')
+                    button(class='submit', type='submit')   
+                      h2 Зарегистрироваться
+
+                
+
+        
+
+br 
+br       
+
+include footer.pug
+  script(src='js/register.js')
+

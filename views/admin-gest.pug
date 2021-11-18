@@ -1,0 +1,24 @@
+h1 Панель администратора
+h2 Информация о гостях
+table(table border='1')
+ tr
+  
+  th Гость
+  th Телефон 
+  th email
+  th Адрес 
+   
+  
+ each val, index in gest
+  tr 
+   
+   td #{val['gest_name']}
+   td #{val['gest_phone']}
+   td #{val['gest_email']}
+   td #{val['gest_address']}
+   
+    
+   
+
+a(href='/')
+  button(class="show-nav") Перейти на сайт   

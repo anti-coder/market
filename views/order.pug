@@ -1,4 +1,4 @@
-// страница заказа
+// страница оформления заказа
 
 include header.pug
 
@@ -8,37 +8,75 @@ div(id='container' class='wrap')
       header(class='site-header')
         include site_header_order.pug
 
+
     div(class='container')
       div(class='rowCart')
-        div(class='col col-md-12')
-          
       div(class='col col-md-12')
         form#lite-shop-order(action="")
                 div(class='form-control')
-                  label(for='username') Имя
+                  label(for='login') Логин
                   input(
                       type='text',
-                      id='username',
+                      id='login',
+                      placeholder='Введите Ваш логин',
+                      )
+                
+                div(class='form-control')
+                  label(for='password') Пароль
+                  input(
+                      type='text',
+                      id='password',
+                      placeholder='Введите Ваш пароль',
+                      )
+
+                div(class='container')
+                  div(class='rowOrder')
+                    button(class='submit', type='submit')   
+                      h2 Оформить заказ
+
+                    
+        div(class='rowReturn')
+          a(href='cart')
+            button(class='submit', type='submit') 
+              h2 Вернуться к корзине 
+
+
+
+div(class='gest')
+  br
+  br
+  h3 Оформить заказ как гость
+
+    div(class='container')
+      div(class='rowCart')
+      
+      div(class='col col-md-12')
+        form#order-gest(action="")
+                div(class='form-control-gest')
+                  label(for='gestname') Имя
+                  input(
+                      type='text',
+                      id='gestname',
                       placeholder='Введите Ваше имя',
                       )
                 div(class='form-control')
-                  label(for='phone') Телефон
+                  label(for='gestphone') Телефон
                   input(
                       type='text',
-                      id='phone',
+                      id='gestphone',
                       placeholder='+380505555555',
                       )
                 div(class='form-control')
-                  label(for='email') Email
+                  label(for='gestemail') Email
                   input(
                       type='text',
-                      id='email',
+                      id='gestemail',
                       placeholder='mail@example.com',
                       )
                 div(class='form-control')
-                  label(for='address') Адрес
+                  label(for='gestaddress') Адрес
                   textarea(
-                      id='address',
+                      id='gestaddress',
                       placeholder='Введите Ваш адрес',
                       )
                 div(class='form-control')
@@ -59,11 +97,13 @@ div(id='container' class='wrap')
         div(class='rowReturn')
           a(href='cart')
             button(class='submit', type='submit') 
-              h2 Вернуться к корзине 
+              h2 Вернуться к корзине        
 
-br 
-br       
+
+  br            
+  br
+
 
 include footer.pug
-  script(src='js/order.js')
 
+script(src='js/order.js')

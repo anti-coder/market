@@ -1,5 +1,5 @@
 h1 Панель администратора
-h2 Информация о заказанных товарах 1
+h2 Информация о товарах, заказанных постоянными покупателями 1(с разбивкой по датам и номерам транзакций)
 table(table border='1')
  tr
   th Номер транзакции
@@ -17,8 +17,8 @@ table(table border='1')
    td #{val['human_date']}
    td #{val['goods_id']}
    td #{val['name']}
-   td #{val['goods_cost']}
+   td #{val['goods_cost'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')} руб.
    td #{val['goods_amount']}
-   td #{val['goods_sum']}
+   td #{val['goods_sum'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')} руб.
 a(href='/')
   button(class="show-nav") Перейти на сайт     

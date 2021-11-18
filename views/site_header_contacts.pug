@@ -1,0 +1,48 @@
+//шапка контактов, входит в contacts.pug
+
+
+div(class='rowHead')
+    
+    div(class='col1')
+      a(href='/')
+        h1 Вася Пупкин & Ко
+
+    
+    div(class='col2')
+      button(id="category" class='show-nav')
+        <h6><i class="fa fa-list">Каталог</i></h6>
+    //  h6 <i onclick="myFunction(this)" class="fa fa-list">Каталог</i>
+
+  
+    
+    div(class='col4') 
+      div(class='search')
+        input(
+              type='text', 
+              id='foundField',
+              placeholder='Поиск товара по названию',
+              )
+        div(class='buttonSearch')     
+          button(id='cleanBtn' class='show-nav') 
+            <i class="fa fa-close"></i>   
+          button(id='foundBtn' class='show-nav') 
+            <i class="fa fa-search"></i>
+    
+
+    div(class='col2')
+      a(href='/cart')    
+        button(class='show-nav') <h6><i class="fa fa-address-card"></i>Корзина</h6>           
+
+    
+
+    div(class='col2')
+      a(href='/register')
+        button(class="show-nav") <h6><i class="fa fa-user"></i>Личный кабинет</h6> 
+        //app.js str.343  
+        
+
+div(id="main-category-list") //список категорий товаров на главной странице     
+
+
+
+  

@@ -4,9 +4,26 @@
  
 let goodsArray = {}; //массив имен товаров, которые соответствуют поиску пользователя
 
-document.querySelectorAll('#foundBtn').forEach(function(element){ // на id #foundBtn вешаем события, forEach - перебираем массив
+document.querySelectorAll('#foundBtn').forEach(function(element){ // на id #foundBtn вешаем события click, forEach - перебираем массив
   element.addEventListener("click", search); //при клике на элемент выполняется функция search()
   });
+
+// document.querySelector('#foundField').addEventListener('keydown', function(e) {
+// if (e.keyCode === 13) {
+// console.log(this.value);
+// search();
+// }
+//  });
+
+document.querySelectorAll('#foundField').forEach(function(element){ // на id #foundField вешаем события нажатия enter (клавиша 13), forEach - перебираем массив
+  element.addEventListener("keydown", function(e) {
+ if (e.keyCode === 13) {
+// console.log(this.value);
+ search();
+};
+});
+});
+
 
 document.querySelectorAll('#cleanBtn').forEach(function(element){ // на id #foundBtn вешаем события, forEach - перебираем массив
   element.addEventListener("click", clear); //при клике на элемент выполняется функция clean()
@@ -18,7 +35,7 @@ event.preventDefault();//останавливаем перезагрузку с�
 let found = document.querySelector('#foundField').value.trim().toLowerCase().replace(" ", ""); //trim обрезает пробелы справа и слева  
 
 if (found.length >2){
-  fetch('/search', {   //запрос на сервер всех наименований товаров app.js str.394
+  fetch('/search', {   //запрос на сервер всех наименований товаров app.js str.602
       method: 'POST',
       headers: {
             'Accept': 'application/json',
@@ -44,7 +61,7 @@ if (found.length >2){
         
      //   console.log(foundArray);
 
-        fetch('/searchAnswer', {   //отправляем повторно запрос на сервер, app.js str.423
+        fetch('/searchAnswer', {   //отправляем повторно запрос на сервер, app.js str.631
           //передаем точные наимнования товаров, удовлетворяющих условиям поиска
           method: 'POST',
           body: JSON.stringify({answer: Object.values(foundArray)}),

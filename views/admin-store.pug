@@ -1,0 +1,20 @@
+h1 Панель администратора
+h2 Информация о количестве продаж и остатках товаров на складе
+table(table border='1')
+ tr
+  th id товара
+  th Количество на начало периода
+  th Количество куплено в периоде
+  
+  th Остаток на конец периода
+  
+ each val, index in store
+  tr 
+   td #{val['id']}
+   td #{val['amount']}
+   td #{val['by_amount']}
+   
+   td #{val['remainder']}
+
+a(href='/')
+  button(class="show-nav") Перейти на сайт     
