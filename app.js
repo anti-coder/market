@@ -3,7 +3,7 @@ let app = express(); //создали новый экземпляр класса
 const data = 'node express work on 3000';
 
 app.listen(3000, function () {   //слушаем порт 3000
-  console.log('работает');
+  console.log('Обновлено 16-45');
 });
 
 app.use(express.json()); // установили метод express.json
