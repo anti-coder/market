@@ -4,9 +4,9 @@ let cookieParser = require('cookie-parser');// подключаем модуль
 let admin = require('./admin.js');// обратились к admin.js
 let mysql = require('mysql'); //Подключаем mysql модуль (база данных)
 let nodemailer = require('nodemailer'); //подключили модуль nodemailer
+let utc = new Date();
 
 app.use(express.static('public')); //подключение статических файлов из папки public
-
 app.set('view engine', 'pug');  //задаем шаблонизатор pug, подключили шаблоны pug в папке view
 
 let con = mysql.createConnection({ //настраиваем mysql модуль (база данных)
@@ -19,9 +19,9 @@ let con = mysql.createConnection({ //настраиваем mysql модуль (
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0; //отключение проверки авторизации при работе локально
 
 app.listen(3000, function () {   //слушаем порт 3000
-//  console.log('node express work on 3000');
+  console.log('подключили node с базой данных на порту 3000');
+  console.log(utc);
 });
-
 app.use(express.json()); // установили метод express.json
 app.use(express.urlencoded()); // чтобы получать чистые данные из POST, чтобы не нужен был login.js 
 app.use(cookieParser()); //чтобы достучаться до куки-парсера
