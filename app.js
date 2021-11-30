@@ -1,7 +1,7 @@
 let express = require('express'); //подключаем модуль express
 let app = express(); //создали новый экземпляр класса express
 const data = 'слушаем порт 3000 в командной строке';
-const brow = 'ответ браузера'
+const brow = 'ответ браузера !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
 let utc = new Date();
 
 
