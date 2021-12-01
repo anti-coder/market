@@ -10,7 +10,7 @@ app.use(express.static('public')); //подключение статически
 app.set('view engine', 'pug');  //задаем шаблонизатор pug, подключили шаблоны pug в папке view
 
 let con = mysql.createConnection({ //настраиваем mysql модуль (база данных)
-  host: 'localhost',
+  host: '5.188.42.115',
   user: 'root',
   password: 'root',
   database: 'market'
